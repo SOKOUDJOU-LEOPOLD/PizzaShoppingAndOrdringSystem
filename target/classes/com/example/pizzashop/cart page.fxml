@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pizzashop.controller.CartPageController">
+   <content>
+      <VBox fx:id="cartRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="870.0" prefWidth="781.0" spacing="80.0">
+         <children>
+            <Label text="Cart">
+               <VBox.margin>
+                  <Insets left="40.0" top="40.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+            </Label>
+            <ScrollPane fx:id="productWrap" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="729.0" prefWidth="783.0">
+               <VBox.margin>
+                  <Insets right="5.0" />
+               </VBox.margin>
+               <content>
+                  <VBox fx:id="firstAfterRootCart" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="782.0" spacing="20.0" styleClass="hbox" stylesheets="@css/menustyle.css">
+                     <padding>
+                        <Insets bottom="-80.0" left="20.0" />
+                     </padding>
+                     <children>
+                        <Label text="FOOD &amp; DRINK DETAILS">
+                           <VBox.margin>
+                              <Insets left="25.0" top="25.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Verdana Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="74.0" prefWidth="690.0" spacing="180.0">
+                           <children>
+                              <Label prefHeight="26.0" prefWidth="287.0" text="Review and modify your items here">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="40.0" top="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Button fx:id="addMoreItemsButton" mnemonicParsing="false" onAction="#backToMenu" prefHeight="34.0" prefWidth="132.0" stylesheets="@css/menustyle.css" text="Add More Items">
+                                 <HBox.margin>
+                                    <Insets right="10.0" top="20.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Verdana" size="14.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip style="-fx-background-color: #0073e6; -fx-text-fill: #ffffff; -fx-font-size: 12px;" text="go back to menu" />
+                                 </tooltip>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="666.0" spacing="370.0" styleClass="hbox" stylesheets="@css/menustyle.css">
+                           <children>
+                              <Label text="Selections">
+                                 <HBox.margin>
+                                    <Insets left="70.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label text="Price" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="34.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <ScrollPane fx:id="scroll">
+                           <content>
+                              <StackPane fx:id="anchorRoot" prefHeight="230.0" prefWidth="832.0">
+                                 <children>
+                                    <Label text="Empty Cart" />
+                                 </children>
+                              </StackPane>
+                           </content>
+                        </ScrollPane>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" minWidth="-Infinity" text="Order Total:">
+                                 <HBox.margin>
+                                    <Insets top="40.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="totalPriceLabel" text="\$">
+                                 <HBox.margin>
+                                    <Insets left="50.0" top="40.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Button fx:id="checkoutButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goCheckout" prefHeight="34.0" prefWidth="161.0" text="CONTINUE CHECKOUT">
+                           <VBox.margin>
+                              <Insets left="280.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <tooltip>
+                              <Tooltip style="-fx-background-color: #0073e6; -fx-text-fill: #ffffff; -fx-font-size: 12px;" text="checkout" />
+                           </tooltip>
+                        </Button>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+         <padding>
+            <Insets bottom="-80.0" />
+         </padding>
+      </VBox>
+   </content>
+</ScrollPane>

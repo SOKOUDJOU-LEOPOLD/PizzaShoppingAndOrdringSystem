@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="locationroot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="351.0" prefWidth="316.0" styleClass="stackpane" stylesheets="@css/locationstyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pizzashop.controller.LocationPageController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="8.0" styleClass="vbox2">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="3.0">
+               <children>
+                  <Circle radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label text="ORDER SETTINGS">
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="vbox">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="My Location:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Hyperlink fx:id="changeHyperLink" onAction="#changeLocation" text="CHANGE" textFill="#e70707">
+                           <tooltip>
+                              <Tooltip text="change your delivery address" />
+                           </tooltip>
+                        </Hyperlink>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="addressLabel">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="vbox">
+               <children>
+                  <Label text="Service Method:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="deliveryMethodLabel" styleClass="devlabel" text="Delivery" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

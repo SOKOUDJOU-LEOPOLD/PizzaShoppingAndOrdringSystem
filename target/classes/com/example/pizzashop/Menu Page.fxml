@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<ScrollPane fx:id="menuPane" styleClass="scrollpane" stylesheets="@css/menustyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pizzashop.controller.MenuPageController">
+   <content>
+      <VBox fx:id="vboxPane" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="794.0" prefWidth="755.0" spacing="15.0">
+         <padding>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+         </padding>
+         <children>
+            <Label stylesheets="@css/menustyle.css" text="OUR MENU" />
+            <Label stylesheets="@css/menustyle.css" text="Discover everything on the Pizza shop’s menu." />
+            <Label stylesheets="@css/menustyle.css" text="Explore our pizza, chicken &amp; more for food delivery near you." />
+            <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="118.0" prefWidth="667.0" styleClass="hbox" stylesheets="@css/menustyle.css">
+               <children>
+                  <ImageView fitHeight="99.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 0); -fx-border-color: #ffffff; -fx-border-width: 2px; -fx-border-radius: 10px;">
+                     <image>
+                        <Image url="@images/buildown.jpg" />
+                     </image>
+                  </ImageView>
+                  <GridPane prefHeight="132.0" prefWidth="490.0">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                     <children>
+                        <Label styleClass="l2" stylesheets="@css/menustyle.css" text="Hand-Tossed" textFill="#0ea1d7" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="-300.0" top="30.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label styleClass="l2" stylesheets="@css/menustyle.css" text="Thin Crust" textFill="#0e9dd1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="-60.0" top="30.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label styleClass="l2" stylesheets="@css/menustyle.css" text="Gluten" textFill="#0ea1d7" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="150.0" top="30.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <Hyperlink fx:id="buildButton" onAction="#buildPizza" text="Build Your Own Pizza">
+                           <GridPane.margin>
+                              <Insets left="-120.0" top="40.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Trebuchet MS Bold" size="24.0" />
+                           </font>
+                           <tooltip>
+                              <Tooltip style="-fx-background-color: #0073e6; -fx-text-fill: white; -fx-font-size: 12px;" text="click to build your pizza" />
+                           </tooltip>
+                        </Hyperlink>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+            <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="116.0" prefWidth="706.0" styleClass="hbox" stylesheets="@css/menustyle.css">
+               <children>
+                  <ImageView fitHeight="91.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/specialty.jpg" />
+                     </image>
+                  </ImageView>
+                  <Hyperlink fx:id="specialityButton" onAction="#showSpeciality" text="Specialty Pizza">
+                     <HBox.margin>
+                        <Insets left="90.0" top="30.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Trebuchet MS Bold" size="24.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip style="-fx-background-color: #0073e6; -fx-text-fill: white; -fx-font-size: 12px;" text="click to view specialty pizza" />
+                     </tooltip>
+                  </Hyperlink>
+               </children>
+            </HBox>
+            <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" styleClass="hbox" stylesheets="@css/menustyle.css">
+               <children>
+                  <ImageView fitHeight="79.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/chicken.jpg" />
+                     </image>
+                  </ImageView>
+                  <Hyperlink fx:id="chickenButton" onAction="#showChicken" text="Chicken">
+                     <font>
+                        <Font name="Trebuchet MS Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="110.0" top="25.0" />
+                     </HBox.margin>
+                     <tooltip>
+                        <Tooltip style="-fx-background-color: #0073e6; -fx-text-fill: white; -fx-font-size: 12px;" text="click to view chickens" />
+                     </tooltip>
+                  </Hyperlink>
+               </children>
+            </HBox>
+            <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" styleClass="hbox" stylesheets="@css/menustyle.css">
+               <children>
+                  <ImageView fitHeight="85.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/drinks.jpg" />
+                     </image>
+                  </ImageView>
+                  <Hyperlink fx:id="drinksButton" onAction="#viewDrinks" text="Drinks">
+                     <font>
+                        <Font name="Trebuchet MS Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="100.0" top="25.0" />
+                     </HBox.margin>
+                     <tooltip>
+                        <Tooltip style="-fx-font-size: 12px; -fx-background-color: #0073e6; -fx-text-fill: white;" text="click to view drinks" />
+                     </tooltip>
+                  </Hyperlink>
+               </children>
+            </HBox>
+            <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" styleClass="hbox" stylesheets="@css/menustyle.css">
+               <children>
+                  <ImageView fitHeight="83.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/sauce.jpg" />
+                     </image>
+                  </ImageView>
+                  <Hyperlink fx:id="extrasButton" onAction="#viewExtras" text="Extras">
+                     <font>
+                        <Font name="Trebuchet MS Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="120.0" top="25.0" />
+                     </HBox.margin>
+                     <tooltip>
+                        <Tooltip style="-fx-font-size: 12px; -fx-text-fill: white; -fx-background-color: #0073e6;" text="click to view extras" />
+                     </tooltip>
+                  </Hyperlink>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>
