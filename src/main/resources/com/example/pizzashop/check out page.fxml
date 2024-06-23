@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="checkoutRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="750.0" stylesheets="@css/checkOutStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pizzashop.controller.CheckOutPageController">
+   <children>
+      <VBox prefHeight="650.0" prefWidth="750.0" spacing="10.0">
+         <children>
+            <Label text="CHECKOUT">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="addressLabel" text="Enter Your Delivery Address" />
+            <VBox fx:id="driverInstructionContainer" prefHeight="200.0" prefWidth="100.0" styleClass="vbox">
+               <children>
+                  <HBox prefHeight="34.0" prefWidth="720.0" styleClass="heading">
+                     <children>
+                        <Label styleClass="headingtext" text="DELIVERY INSTRUCTION FOR DRIVER" />
+                     </children>
+                  </HBox>
+                  <Label text="Example: I am wearing red short, blue T-shirt" />
+                  <TextField fx:id="driverInstructionField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="584.0" styleClass="text-field">
+                     <VBox.margin>
+                        <Insets left="20.0" top="14.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="8.0" right="8.0" top="5.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox fx:id="paymentContainer" prefHeight="522.0" prefWidth="750.0" style="-fx-background-color: #ADD8E6;" styleClass="vbox">
+               <children>
+                  <HBox prefHeight="35.0" prefWidth="706.0" styleClass="heading">
+                     <children>
+                        <Label styleClass="headingtext" text="PAYMENT" />
+                     </children>
+                  </HBox>
+                  <Label text="*Payment Type" />
+                  <RadioButton fx:id="payWithCashRadio" mnemonicParsing="false" text="Pay with cash">
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="13.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="paymentType" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="cardPaymentRadio" mnemonicParsing="false" text=" Pay now with debit or credit card" toggleGroup="$paymentType">
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="13.0" />
+                     </font>
+                  </RadioButton>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="*Card Number:">
+                           <VBox.margin>
+                              <Insets left="22.0" top="8.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="cardNumberField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="530.0" promptText="XXXX XXXX XXXX XXXX">
+                           <VBox.margin>
+                              <Insets left="50.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label text="*Card Holder Name:">
+                           <VBox.margin>
+                              <Insets left="22.0" top="8.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="CardHolderName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="534.0">
+                           <VBox.margin>
+                              <Insets left="50.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label text="*Expiration Date:">
+                           <VBox.margin>
+                              <Insets left="22.0" top="8.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox fx:id="expirationDateHolder" prefHeight="39.0" prefWidth="750.0" spacing="110.0">
+                           <children>
+                              <TextField fx:id="expirationMonthField" promptText="MM">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <TextField fx:id="expirationYearField" promptText="YY" />
+                           </children>
+                        </HBox>
+                        <Label text="*Security Code:">
+                           <VBox.margin>
+                              <Insets left="22.0" top="8.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="securityCodeField">
+                           <VBox.margin>
+                              <Insets left="50.0" right="120.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label text="*Billing Zip Code:">
+                           <VBox.margin>
+                              <Insets left="22.0" top="8.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="zipCodeField">
+                           <VBox.margin>
+                              <Insets left="50.0" right="120.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <RadioButton fx:id="chequePaymentRadio" mnemonicParsing="false" text="Pay With Cheque" toggleGroup="$paymentType">
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="13.0" />
+                     </font>
+                  </RadioButton>
+                  <Label text="*Account Number:">
+                     <VBox.margin>
+                        <Insets left="22.0" top="8.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="accountNumberField">
+                     <VBox.margin>
+                        <Insets left="50.0" right="120.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="*Routing Number:">
+                     <VBox.margin>
+                        <Insets left="22.0" top="8.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="routingNumberField">
+                     <VBox.margin>
+                        <Insets left="50.0" right="120.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="8.0" right="8.0" top="5.0" />
+               </VBox.margin>
+            </VBox>
+            <Button fx:id="processOrderButton" mnemonicParsing="false" onAction="#validatePayment" text="PAY YOUR ORDER" textFill="#688ad9">
+               <tooltip>
+                  <Tooltip text="Process your payment" />
+               </tooltip>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="550.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

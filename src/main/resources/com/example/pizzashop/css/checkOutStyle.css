@@ -1,0 +1,53 @@
+
+.heading {
+    -fx-background-color: #688ad9;
+    -fx-border-color: #688ad9;
+    -fx-border-width: 2px;
+}
+
+.headingtext {
+    -fx-font-style: bold;
+    -fx-font-size: 15px;
+}
+
+.label {
+    -fx-padding: 0 0 0 20px;
+}
+
+.radio-button {
+    -fx-padding: 0 0 0 17px;
+}
+
+.text-field {
+    -fx-padding: 0 40 0 40;
+}
+
+.t2 {
+    -fx-padding: 0 0 0 40;
+}
+
+.l2 {
+    -fx-text-fill: #0073e6;
+}
+
+.button {
+    -fx-text-fill: #ffffff;
+    -fx-font-style: bold;
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #ADD8E6, #0073e6);
+    -fx-border-radius: 12px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 0);
+}
+
+.vbox {
+    -fx-border-style: solid;
+    -fx-border-color: #688ad9;
+    -fx-padding: 13px;
+}
+
+.payment-box {
+    -fx-background-color: #ADD8E6;
+}

@@ -1,0 +1,101 @@
+/* styles.css */
+
+/* Apply a background color to the VBox */
+.scrollpane {
+    -fx-background-color: #f0f0f0; /* Light gray background color */
+    /*-fx-padding: 10px;  Add padding to the VBox */
+}
+
+.hbox {
+    -fx-background-color: #f0f0f0; /* Light gray background color */
+    /*-fx-padding: 10px;  Add padding to the VBox */
+    -fx-border-color: #cccccc; /* Border color */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 10px; /* Border radius */
+}
+
+/* Style for the ImageViews containing menu images */
+.image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 0); /* Add a drop shadow effect */
+    -fx-border-color: #ffffff; /* Border color for image view */
+    -fx-border-width: 2px; /* Border width for image view */
+    -fx-border-radius: 10px; /* Border radius for image view */
+}
+
+/* Style for the Labels */
+.label {
+    -fx-font-size: 16px; /* Font size */
+    -fx-font-weight: bold; /* Bold text */
+    -fx-text-fill: #333333; /* Text color */
+}
+
+/* Style for the Labels under pane layout*/
+.l2 {
+    -fx-font-size: 16px; /* Font size */
+    -fx-font-weight: bold; /* Bold text */
+    -fx-text-fill: #0073e6; /* Text color */
+    -fx-end-margin: 40px 0px 0px -300px;
+}
+
+/* Style for the Hyperlink */
+.hyperlink {
+    -fx-text-fill: #0073e6; /* Hyperlink text color */
+    -fx-underline: false; /* Remove underline */
+    -fx-cursor: hand; /* Add hand cursor on hover */
+}
+
+/* Hover effect for the Hyperlink */
+.hyperlink:hover {
+    -fx-background-color: #e6f7ff; /* Light blue background color on hover */
+}
+
+
+
+.button {
+    -fx-text-fill: #ffffff;
+    -fx-font-style: bold;
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #ADD8E6, #0073e6);
+    -fx-border-radius: 12px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 0);
+}
+
+.nav {
+    -fx-background-color: #0073e6;
+}
+
+.navbutton {
+    -fx-text-fill: #000000;
+    -fx-font-style: bold;
+    -fx-background-color: #0073e6;
+    -fx-border-radius: 12px;
+    -fx-border-color: #000000;
+    -fx-cursor: hand;
+    -fx-padding: 10px;
+}
+
+.navbutton:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 0);
+    -fx-padding: 12px;
+}
+
+.navbutton:focused {
+    -fx-background-color: #FFA07A;
+    -fx-border-width: 0 0 2 0; /* 0 on top, right, left; 2 on bottom */
+    -fx-border-color: #FFA07A;
+}
+
+.vbox {
+    -fx-border-style: solid;
+    -fx-border-color: #688ad9;
+    -fx-padding: 13px;
+}
+
+.heading {
+    -fx-background-color: #688ad9;
+    -fx-border-color: #688ad9;
+    -fx-border-width: 2px;
+}

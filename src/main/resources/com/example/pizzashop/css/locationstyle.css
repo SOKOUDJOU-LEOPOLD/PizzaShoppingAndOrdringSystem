@@ -1,0 +1,58 @@
+/* Style for the Hyperlink */
+.hyperlink {
+    -fx-text-fill: red; /* Hyperlink text color */
+    -fx-underline: false; /* Remove underline */
+    -fx-cursor: hand; /* Add hand cursor on hover */
+    -fx-border-width: 0;
+}
+
+/* Hover effect for the Hyperlink */
+.hyperlink:hover {
+    -fx-background-color: #e6f7ff; /* Light blue background color on hover */
+    -fx-border-color: #FFA07C;
+}
+
+.vbox {
+    -fx-border-style: solid;
+    -fx-border-color: #000000;
+    -fx-padding: 13px;
+}
+
+.vbox2 {
+{
+    -fx-padding: 13px;
+}
+}
+.stackpane {
+    -fx-padding: 12px;
+    -fx-border-color: #0073e6;
+    -fx-border-radius: 0;
+}
+
+.devlabel {
+    -fx-padding: 20px 0px 0px 40px ;
+}
+
+.save {
+    -fx-text-fill: #ffffff;
+    -fx-font-style: bold;
+    -fx-background-color: #63ea49;
+    -fx-border-radius: 12px;
+    -fx-cursor: hand;
+}
+
+.save:hover {
+     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 0);
+ }
+
+.cancel {
+    -fx-text-fill: #ffffff;
+    -fx-font-style: bold;
+    -fx-background-color: #ea4423;
+    -fx-border-radius: 12px;
+    -fx-cursor: hand;
+}
+
+.cancel:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 0);
+}
