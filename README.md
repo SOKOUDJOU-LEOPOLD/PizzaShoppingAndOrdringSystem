@@ -1,6 +1,7 @@
 # PizzaShoppingAndOrdringSystem
 This program was built using Java, JavaFX and CSS. It was inspired from the Domino's Website.
 This application allows users to browse, customize, and order pizzas with a user-friendly interface. Built with Java, JavaFX, and styled with CSS, it provides an engaging shopping experience.
+This APP has two spaces: The Admin Space and the Customer Space:
 
 ![pizza-shop-logo no background](https://github.com/user-attachments/assets/d8b02701-168f-40f2-bf04-5a9cf2b75d26)
 
@@ -19,6 +20,20 @@ This application allows users to browse, customize, and order pizzas with a user
 
 ## Features
 
+### Admin Features
+- View and manage customer accounts, including the ability to activate, deactivate, or delete accounts.
+- Reset user passwords and update user information.
+- Monitor user activity and order history.
+- Add, edit, or remove pizza items from the menu.
+- Manage pizza categories and ingredients.
+- Update pricing and availability for each menu item.
+- Upload images for pizzas to enhance the menu display.
+- View all current and past orders with detailed information.
+- Update order status (e.g., pending, in progress, delivered, canceled).
+- Assign orders to delivery personnel.
+- Generate invoices and receipts.
+
+### Customer Features
 - **Browse Menu:** View a variety of pizzas with descriptions and prices.
 - **Customize Pizza:** Select ingredients and sizes to create a personalized pizza.
 - **Order Tracking:** Track the status of your order in real-time.
