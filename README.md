@@ -38,7 +38,6 @@ This APP has two spaces: The Admin Space and the Customer Space:
 - **Customize Pizza:** Select ingredients and sizes to create a personalized pizza.
 - **Order Tracking:** Track the status of your order in real-time.
 - **User Authentication:** Sign up and log in to save orders and preferences.
-- **Responsive Design:** Optimized for various screen sizes.
 
 ## Technologies Used
 
